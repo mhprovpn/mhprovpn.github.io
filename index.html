@@ -1,272 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MH Pro VPN - Secure & Private</title>
-    <style>
-        /* ========================
-           CSS Variables & Reset 
-           ======================== */
-        :root {
-            --bg-body: #111827;      /* နောက်ခံအမည်းရောင် */
-            --bg-card: #1f2937;      /* ကတ်များ၏ အမည်းရောင် (အနည်းငယ်လင်း) */
-            --text-cyan: #0ea5e9;    /* ခေါင်းစဉ် အပြာနုရောင် */
-            --text-white: #f3f4f6;
-            --text-gray: #9ca3af;
-            --btn-primary: linear-gradient(90deg, #06b6d4, #3b82f6);
-            --btn-secondary: #374151;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+<title>MH Pro VPN - Free Cloudflare WARP VPN</title>
 
-        body {
-            background-color: var(--bg-body);
-            color: var(--text-white);
-            line-height: 1.6;
-            padding-bottom: 50px;
-        }
+<meta name="description" content="MH Pro VPN is a secure and fast VPN powered by Cloudflare WARP technology.">
+<meta name="keywords" content="MH Pro VPN, VPN APK, Free VPN, Cloudflare WARP">
 
-        /* ========================
-           Header Section 
-           ======================== */
-        header {
-            text-align: center;
-            padding: 40px 20px 20px 20px;
-        }
+<style>
 
-        h1 {
-            font-size: 2.2rem;
-            color: var(--text-cyan);
-            margin-bottom: 10px;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-        header p {
-            color: var(--text-gray);
-            font-size: 0.95rem;
-        }
+body{
+background:#08142e;
+color:white;
+}
 
-        /* ========================
-           Container & Cards Layout 
-           ======================== */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
 
-        .card {
-            background-color: var(--bg-card);
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
+.hero{
+text-align:center;
+padding:50px 20px;
+}
 
-        /* ========================
-           Download Section (Top Card)
-           ======================== */
-        .download-section {
-            text-align: center;
-        }
+.hero h1{
+font-size:52px;
+color:#19a7ff;
+margin-bottom:15px;
+}
 
-        .download-section h2 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: var(--text-white);
-        }
+.hero p{
+font-size:20px;
+color:#bfc9d8;
+line-height:1.6;
+}
 
-        .btn-group {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+.card{
+background:#17243f;
+border-radius:30px;
+padding:35px;
+margin:25px 0;
+box-shadow:0 0 25px rgba(0,140,255,.15);
+}
 
-        .btn {
-            padding: 12px 20px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            border-radius: 25px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-            border: none;
-        }
+.card h2{
+text-align:center;
+font-size:42px;
+margin-bottom:35px;
+}
 
-        .btn-primary {
-            background: var(--btn-primary);
-            color: #fff;
-            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
-        }
+.btn{
+display:block;
+width:100%;
+max-width:420px;
+margin:20px auto;
+padding:22px;
+text-align:center;
+text-decoration:none;
+font-size:24px;
+font-weight:bold;
+border-radius:60px;
+transition:.3s;
+}
 
-        .btn-primary:hover {
-            box-shadow: 0 6px 20px rgba(6, 182, 212, 0.6);
-            transform: translateY(-2px);
-        }
+.btn-main{
+background:linear-gradient(90deg,#00d4ff,#3f6fff);
+color:white;
+box-shadow:0 0 20px rgba(0,200,255,.5);
+}
 
-        .btn-secondary {
-            background: var(--btn-secondary);
-            color: #d1d5db;
-        }
+.btn-secondary{
+background:#34405d;
+color:white;
+}
 
-        .btn-secondary:hover {
-            background: #4b5563;
-            transform: translateY(-2px);
-        }
+.btn:hover{
+transform:translateY(-3px);
+}
 
-        /* ========================
-           Content Sections (Flex Layout)
-           ======================== */
-        .content-flex {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-        }
+.feature{
+text-align:center;
+}
 
-        .content-flex.reverse {
-            flex-direction: row-reverse;
-        }
+.feature h3{
+color:#19a7ff;
+font-size:42px;
+margin-bottom:20px;
+}
 
-        .text-content {
-            flex: 1;
-        }
+.feature p{
+font-size:24px;
+line-height:1.8;
+color:#d6dce6;
+}
 
-        .text-content h2 {
-            color: var(--text-cyan);
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-        }
+.screenshot{
+width:100%;
+max-width:350px;
+display:block;
+margin:35px auto;
+border-radius:25px;
+box-shadow:0 0 20px rgba(0,0,0,.4);
+}
 
-        .text-content p {
-            color: var(--text-white);
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
+.whatsnew ul{
+padding-left:25px;
+font-size:22px;
+line-height:2;
+}
 
-        .image-content {
-            flex: 1;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-        }
+.footer{
+text-align:center;
+padding:30px;
+color:#a7b3c7;
+}
 
-        .image-content img {
-            max-width: 250px; /* ပုံအရွယ်အစား ကန့်သတ်ချက် */
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
+@media(max-width:768px){
 
-        /* ========================
-           Responsive (Mobile view)
-           ======================== */
-        @media (max-width: 768px) {
-            /* ဖုန်းမှာဆိုရင် စာနဲ့ပုံ အပေါ်အောက်စီသွားအောင် ပြုလုပ်ခြင်း */
-            .content-flex, .content-flex.reverse {
-                flex-direction: column;
-                text-align: center;
-            }
-            .image-content img {
-                max-width: 200px;
-            }
-        }
+.hero h1{
+font-size:38px;
+}
 
-        /* ========================
-           Bottom Image Section 
-           ======================== */
-        .bottom-image {
-            text-align: center;
-            margin-top: 10px;
-        }
+.card h2{
+font-size:28px;
+}
 
-        .bottom-image img {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
-            border-radius: 12px;
-        }
-    </style>
+.feature h3{
+font-size:30px;
+}
+
+.feature p{
+font-size:18px;
+}
+
+.btn{
+font-size:20px;
+padding:18px;
+}
+
+}
+
+</style>
 </head>
 <body>
 
-    <header>
-        <h1>MH Pro VPN</h1>
-        <p>MH Pro Vpn Myanmar, Secure, and Unlimited VPN for Android</p>
-    </header>
+<div class="container">
 
-    <div class="container">
-        
-        <div class="card download-section">
-            <h2>MH Pro VPN V3.0</h2>
-            <div class="btn-group">
-                <a href="https://codeberg.org/mhwarp/MH_Warp/raw/branch/main/MHPro_V3.0.apk" class="btn btn-primary" onclick="startDownload(event)">
-                    ⬇️ Download Link 1
-                </a>
-                
-                <a href="https://www.mediafire.com/file/ib3hm86wg8ri40u/MHPro_V3.0.apk/file" class="btn btn-secondary" onclick="startDownload(event)">
-                    📥 Download Link 2
-                </a>
-                
-                <a href="https://t.me/mhprovpn" class="btn btn-secondary" onclick="startDownload(event)">
-                    📁 Download in Telegram
-                </a>
-            </div>
-        </div>
+<section class="hero">
 
-        <div class="card">
-            <div class="content-flex">
-                <div class="text-content">
-                    <h2>Protect Your Privacy</h2>
-                    <p>Browse the internet safely and anonymously. Our military-grade encryption ensures that your personal data remains private, no matter which network you connect to. Unlock restricted content and enjoy blazing-fast speeds.</p>
-                </div>
-                <div class="image-content">
-                    <img src="image1.jpg" alt="VPN Connection Screen">
-                </div>
-            </div>
-        </div>
+<h1>MH Pro VPN</h1>
 
-        <div class="card">
-            <div class="content-flex reverse">
-                <div class="text-content">
-                    <h2>Global Server Network</h2>
-                    <p>Connect to thousands of servers across the globe. Whether you want to stream your favorite shows or play games with low ping, FastVPN provides a stable and seamless connection everywhere.</p>
-                </div>
-                <div class="image-content">
-                    <img src="image2.png" alt="Server Selection Screen">
-                </div>
-            </div>
-        </div>
+<p>
+MH Pro VPN Myanmar, Secure and Unlimited VPN for Android
+</p>
 
-        <div class="bottom-image">
-            <img src="image3.jpg" alt="Bottom Banner">
-        </div>
+</section>
 
-    </div>
+<div class="card">
 
-    <script>
-        function startDownload(event) {
-            // လိုအပ်ပါက console.log ဖျက်နိုင်ပါသည်
-            console.log("Download button clicked");
-        }
-    </script>
-    
-    <footer style="text-align: center; padding: 20px; margin-top: 20px; color: #9ca3af; font-size: 0.9rem;">
-        <p>&copy; 2026 MH Pro VPN. All rights reserved.</p>
-        <p style="margin-top: 10px;">
-            <a href="privacy.html" style="color: #0ea5e9; text-decoration: none;">Privacy Policy</a> | 
-            <a href="#" style="color: #0ea5e9; text-decoration: none;">Terms of Service</a>
-        </p>
-    </footer>
+<h2>MH Pro VPN V3.0</h2>
+
+<a href="APK_LINK" class="btn btn-main">
+⬇ Download Link 1
+</a>
+
+<a href="MIRROR_LINK" class="btn btn-secondary">
+📦 Download Link 2
+</a>
+
+<a href="TELEGRAM_LINK" class="btn btn-secondary">
+📁 Download in Telegram
+</a>
+
+</div>
+
+<div class="card feature">
+
+<h3>Protect Your Privacy</h3>
+
+<p>
+Browse the internet safely and anonymously with military-grade encryption and Cloudflare WARP technology.
+</p>
+
+<img src="images/screen1.jpg" class="screenshot">
+
+</div>
+
+<div class="card feature">
+
+<h3>Global Server Network</h3>
+
+<p>
+Connect to fast and stable VPN servers worldwide with low latency and high performance.
+</p>
+
+<img src="images/screen2.jpg" class="screenshot">
+
+</div>
+
+<div class="card feature">
+
+<h3>Fast & Stable Connection</h3>
+
+<p>
+Enjoy blazing-fast speed, smooth streaming, gaming and secure browsing everywhere.
+</p>
+
+<img src="images/screen3.jpg" class="screenshot">
+
+</div>
+
+<div class="card whatsnew">
+
+<h2>What's New In V3.0</h2>
+
+<ul>
+<li>Improved Connection Stability</li>
+<li>Faster WARP Routing</li>
+<li>Auto Reconnect Feature</li>
+<li>New Modern UI</li>
+<li>Better Android Compatibility</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>FAQ</h2>
+
+<p><b>Is MH Pro VPN Free?</b><br>Yes, completely free.</p>
+
+<br>
+
+<p><b>Does it support Android TV?</b><br>Yes, Android TV & Android Box supported.</p>
+
+</div>
+
+<div class="footer">
+
+© 2026 MH Pro VPN. All Rights Reserved.
+
+</div>
+
+</div>
 
 </body>
 </html>
